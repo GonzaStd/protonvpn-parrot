@@ -3,7 +3,7 @@ I struggled while trying to install ProtonVPN in ParrotOS. Proton shows [how to 
 
 Exclusions:
 ```text
-# DEBIAN/postinst/
+# This goes in /etc/apt/preferences.d/protonvpn-parrot (the magic is in DEBIAN/postinst/)
 Package: python3-proton*
 Pin: release o=Parrot
 Pin-Priority: -1
