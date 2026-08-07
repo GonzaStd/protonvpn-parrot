@@ -1,0 +1,6 @@
+#!/bin/sh
+set -e
+
+rm -f /etc/apt/sources.list.d/protonvpn-stable.sources
+rm -f /var/lib/dpkg/info/protonvpn-parrot.list
+rm -f /etc/apt/preferences.d/protonvpn-parrot

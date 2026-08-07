@@ -1,0 +1,39 @@
+#!/bin/sh
+set -e
+
+if [ -f /etc/os-release ]; then
+    . /etc/os-release
+
+    if [ "$ID" = "parrot" ]; then
+
+        cat > /etc/apt/preferences.d/protonvpn-parrot <<EOF
+Package: python3-proton*
+Pin: release o=Parrot
+Pin-Priority: -1
+
+Package: python-proton*
+Pin: release o=Parrot
+Pin-Priority: -1
+
+Package: proton*
+Pin: release o=Parrot
+Pin-Priority: -1
+
+
+Package: proton*
+Pin: origin repo.protonvpn.com
+Pin-Priority: 1001
+
+Package: python3-proton*
+Pin: origin repo.protonvpn.com
+Pin-Priority: 1001
+
+Package: python-proton*
+Pin: origin repo.protonvpn.com
+Pin-Priority: 1001
+EOF
+
+    fi
+fi
+
+exit 0

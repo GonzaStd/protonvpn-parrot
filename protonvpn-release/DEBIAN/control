@@ -1,0 +1,13 @@
+Package: protonvpn-parrot
+Version: 1.0.8+parrot1
+Architecture: all
+Maintainer: Proton Technologies AG <opensource@proton.me>
+Installed-Size: 16
+Depends: gnupg | gnupg2, apt-transport-https
+Recommends: gpgv
+Breaks: protonvpn-beta-release
+Replaces: protonvpn-beta-release
+Section: libs
+Priority: optional
+Homepage: https://protonvpn.com/
+Description: Package to install ProtonVPN GPG key and stable repo for parrot modified by GonzaStd on github
